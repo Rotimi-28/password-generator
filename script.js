@@ -15,7 +15,8 @@ if (passwordLength < 8 || passwordLength > 128) {
  let includeSymbol = confirm('do you want to include symbol')
 
   let password = '';
- //password =  gepatRandomUpper() + getRandomLower() + getRandomNumber() + getRandomSymbol()
+
+ //password =  getRandomUpper() + getRandomLower() + getRandomNumber() + getRandomSymbol()
   for (let i = 0; i < passwordLength; i ++) {
     // password += getRandomUpper() + getRandomLower() + getRandomNumber() + getRandomSymbol()
     if (includeLowerCase === true) {
@@ -34,6 +35,7 @@ if (passwordLength < 8 || passwordLength > 128) {
   }
   return password.substring(0, passwordLength) 
 }
+
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
